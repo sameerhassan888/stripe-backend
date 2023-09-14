@@ -1,9 +1,23 @@
 {
   "version": 2,
   "builds": [
-    { "src": "backend/stripe-server.js", "use": "@now/node" } 
+    {
+      "src": "backend/stripe-server.js",
+      "use": "@now/node"
+    },
+    {
+      "src": "*.js",
+      "use": "@vercel/node"
+    }
   ],
   "routes": [
-    { "src": "/(.*)", "dest": "backend/stripe-server.js" }
+    {
+      "src": "/(.*)",
+      "dest": "backend/stripe-server.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/"
+    }
   ]
 }

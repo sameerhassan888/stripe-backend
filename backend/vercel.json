@@ -4,19 +4,15 @@
     {
       "src": "backend/stripe-server.js",
       "use": "@now/node"
-    },
-    {
-      "src": "*.js",
-      "use": "@vercel/node"
     }
   ],
   "routes": [
     {
-      "src": "/(.*)",
-      "dest": "backend/stripe-server.js"
+      "src": "^/backend/(.*)",
+      "dest": "/backend/stripe-server.js"
     },
     {
-      "src": "/(.*)",
+      "src": ".*",
       "dest": "/"
     }
   ]

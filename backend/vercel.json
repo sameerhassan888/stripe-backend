@@ -1,0 +1,10 @@
+{
+    "version": 2,
+    "builds": [
+      { "src": "backend/stripe-server.js", "use": "@now/node" } 
+    ],
+    "routes": [
+      { "src": "/stripe/(.*)", "dest": "backend/stripe-server.js" }
+    ]
+  }
+  

@@ -20,15 +20,18 @@ app.use(
 );
 
 
-
-
-
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 
 const YOUR_DOMAIN1 = 'http://localhost:3000/Confirmation';
 const YOUR_DOMAIN2 = 'http://localhost:3000/error'; // Replace with your frontend domain
+
+
+app.get('/stripe', (req, res) => {
+  res.send('Stripe endpoint is working'); 
+});
+
 
 app.post('/create-checkout-session', async (req, res) => {
   const { title, price, images } = req.body;

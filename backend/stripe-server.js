@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const stripe = require('stripe')('sk_test_51NYCQeKoX4yf2BcD38ZV9enuyIuCnYmqKw3v8OxgRRjZX0UgfJiXKnSC8llbu8ZQxkgxMdMurj2GSsXj0j64bE0q00w9u8PYe9');
 
 
-const allowedOrigins = ['http://localhost:3000'];
+const allowedOrigins = ['https://frontend-journeyscape.vercel.app'];
 
 app.use(
   cors({

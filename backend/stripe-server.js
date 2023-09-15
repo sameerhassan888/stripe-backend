@@ -24,8 +24,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 
-const YOUR_DOMAIN1 = 'http://localhost:3000/Confirmation';
-const YOUR_DOMAIN2 = 'http://localhost:3000/error'; // Replace with your frontend domain
+const YOUR_DOMAIN1 = 'https://frontend-journeyscape.vercel.app/Confirmation';
+const YOUR_DOMAIN2 = 'https://frontend-journeyscape.vercel.app/error'; 
 
 
 app.get('/stripe', (req, res) => {
